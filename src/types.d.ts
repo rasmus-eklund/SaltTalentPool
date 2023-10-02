@@ -11,5 +11,13 @@ export type Consultant = {
   decription: string;
   skills: string[];
   id: string;
-  title: string,
+  title: string;
+  recentProjects: Project[];
+  teamMembers: string[];
+};
+
+export type Project = {
+  title: string;
+  youtube: string;
+  description: string;
 };
