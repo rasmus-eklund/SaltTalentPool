@@ -1,7 +1,9 @@
 import type { FC } from "react";
-import { data } from "../mockdata";
 import type { Consultant } from "@/types";
 import Image from "next/image";
+import Link from "next/link";
+import Github from "../components/Github";
+import LinkedIn from "../components/LinkedIn";
 
 type DeveloperListProps = {
   consultant: Consultant;
@@ -9,10 +11,14 @@ type DeveloperListProps = {
 
 const DeveloperList: FC<DeveloperListProps> = ({ consultant }) => {
   return (
-    <li>
-      image
-      <p>{consultant.firstName}</p>
-      text gitHub inkedin
+    <li className="flex items-center">
+      <Image src={consultant.image} alt="Image" width={64} height={64} />
+      <Link href={`developer/${consultant.id}`}>
+        {consultant.firstName} {consultant.lastName}
+      </Link>
+      <p>{consultant.title}</p>
+      <Github url={consultant.github} />
+      <LinkedIn url={consultant.linkedin} />
     </li>
   );
 };
