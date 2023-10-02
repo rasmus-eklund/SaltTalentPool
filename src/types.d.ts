@@ -11,4 +11,5 @@ export type Consultant = {
   decription: string;
   skills: string[];
   id: string;
+  title: string,
 };

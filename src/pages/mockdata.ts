@@ -16,9 +16,10 @@ export const data: { consultants: Consultant[] } = {
       },
       cv: "url",
       skills: ["JavaScript", 'Python', 'Matlab'],
-      decription: "The best developer with media background",
+      decription: "Title of the developer in question",
       github: "https://github.com/Jarjarsson",
       linkedin: "link",
+      title: 'best developer in the world'
     },
   ],
 };
