@@ -1,10 +1,11 @@
+import { getUser } from "@/server/client";
 import DeveloperList from "./DeveloperList";
-import { data } from "../mockdata";
 
 const Search = () => {
+  const data = getUser("1");
   return (
     <main>
-      <DeveloperList consultant={data.consultants[0]!} />
+      <DeveloperList consultant={data!} />
     </main>
   );
 };
