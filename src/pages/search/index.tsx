@@ -1,9 +1,10 @@
-import Link from "next/link";
+import DeveloperList from "./DeveloperList";
+import { data } from "../mockdata";
 
 const Search = () => {
   return (
     <main>
-      <Link href={`developer/${"1"}`}>Jar jar Jarsson</Link>
+      <DeveloperList consultant={data.consultants[0]!} />
     </main>
   );
 };
