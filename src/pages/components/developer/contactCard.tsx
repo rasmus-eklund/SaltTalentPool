@@ -23,7 +23,7 @@ const ContactCard: FC<ContactCardProps> = ({ consultant }) => {
       <h2 className="text-4xl">
         {consultant.firstName} {consultant.lastName}
       </h2>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 p-2">
         <IconTemp path={mdilPhone} content={consultant.phone} />
         <IconTemp path={mdilEmail} content={consultant.mail} />
         <IconTemp
