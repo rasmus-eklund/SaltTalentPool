@@ -9,7 +9,7 @@ type DeveloperListProps = {
   consultant: Consultant;
 };
 
-const DeveloperList: FC<DeveloperListProps> = ({ consultant }) => {
+const DeveloperItem: FC<DeveloperListProps> = ({ consultant }) => {
   return (
     <li className="flex items-center">
       <Image src={consultant.image} alt="Image" width={64} height={64} />
@@ -23,4 +23,4 @@ const DeveloperList: FC<DeveloperListProps> = ({ consultant }) => {
   );
 };
 
-export default DeveloperList;
+export default DeveloperItem;

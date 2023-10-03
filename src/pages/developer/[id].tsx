@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import type { Consultant } from "@/types";
 import { useRouter } from "next/router";
-import ContactCard from "../components/developer/contactCard";
+import ContactCard from "../components/developer/ContactCard";
 import Skillset from "../components/developer/skillset";
 import RecentProject from "../components/developer/recentProject";
 import { getUser } from "@/server/client";
-import TeamMembers from "../components/developer/Teammembers";
+import TeamMembers from "../components/developer/TeamMembers";
 
 const Developer = () => {
   const router = useRouter();
