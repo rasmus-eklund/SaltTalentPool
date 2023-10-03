@@ -9,7 +9,7 @@ export default {
         black:'#353535',
         gray:'#f8f8f8',
         white:'#ffffff',
-        pink:'f35c7'
+        pink:'#f35c7e'
       }
     },
   },

@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply flex flex-col h-screen;
+  @apply h-screen;
+}
+
+#__next {
+  @apply h-screen flex flex-col;
 }

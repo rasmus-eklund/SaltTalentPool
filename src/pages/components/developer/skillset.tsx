@@ -4,16 +4,16 @@ type Props = { skills: string[] };
 
 const Skillset: FC<Props> = ({ skills }) => {
   return (
-    <section className="flex flex-col">
-      <h2>Skillset</h2>
+    <div className="flex flex-col gap-4">
+      <h2 className="text-3xl font-semibold">Skillset</h2>
       <ul className="flex flex-wrap gap-4">
         {skills.map((skill, index) => (
           <li key={skill + index}>
-            <p>{skill}</p>
+            <p className="bg-orange px-4 py-1 rounded-full text-white">{skill}</p>
           </li>
         ))}
       </ul>
-    </section>
+    </div>
   );
 };
 

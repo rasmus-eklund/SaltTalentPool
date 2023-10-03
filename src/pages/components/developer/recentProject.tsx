@@ -1,5 +1,5 @@
-import { Project } from "@/types";
-import { FC } from "react";
+import type { Project } from "@/types";
+import type { FC } from "react";
 
 type RecentProjectProps = {
   project: Project;
@@ -7,13 +7,12 @@ type RecentProjectProps = {
 
 const RecentProject: FC<RecentProjectProps> = ({ project }) => {
   return (
-    <div>
-      <p>{project.title}</p>
-      <div className="flex gap-2">
+    <div className="flex flex-col gap-4">
+      <p className="text-3xl font-semibold">Current Project : {project.title}</p>
+      <div className="flex gap-4">
         <iframe
           src={project.youtube}
           title={project.title}
-          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>

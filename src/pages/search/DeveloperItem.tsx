@@ -11,14 +11,27 @@ type DeveloperListProps = {
 
 const DeveloperItem: FC<DeveloperListProps> = ({ consultant }) => {
   return (
-    <li className="flex items-center">
-      <Image src={consultant.image} alt="Image" width={64} height={64} />
-      <Link href={`developer/${consultant.id}`}>
-        {consultant.firstName} {consultant.lastName}
-      </Link>
-      <p>{consultant.title}</p>
-      <Github url={consultant.github} />
-      <LinkedIn url={consultant.linkedin} />
+    <li className="flex items-center justify-between rounded-md border-2 border-black/30 p-4 shadow-xl">
+      <div className="flex items-center gap-4">
+        <Image
+          src={consultant.image}
+          alt="Image"
+          width={50}
+          height={50}
+          className="rounded-full border-2 border-black"
+        />
+        <Link
+          href={`developer/${consultant.id}`}
+          className="text-2xl font-bold"
+        >
+          {consultant.firstName} {consultant.lastName}
+        </Link>
+        <p>{consultant.title}</p>
+      </div>
+      <div className="flex items-center">
+        <Github url={consultant.github} size={50} />
+        <LinkedIn url={consultant.linkedin} size={50} />
+      </div>
     </li>
   );
 };

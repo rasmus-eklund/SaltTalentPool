@@ -12,28 +12,30 @@ type ContactCardProps = {
 
 const ContactCard: FC<ContactCardProps> = ({ consultant }) => {
   return (
-    <section className="flex flex-col items-center">
-      <Image
-        className="rounded-full"
-        src={consultant.image}
-        alt="profile picture"
-        width={100}
-        height={100}
-      />
-      <h2 className="text-4xl">
-        {consultant.firstName} {consultant.lastName}
-      </h2>
-      <div className="flex flex-col gap-2 p-2">
-        <IconTemp path={mdilPhone} content={consultant.phone} />
-        <IconTemp path={mdilEmail} content={consultant.mail} />
+    <section className="flex flex-col gap-6 p-10">
+      <div className="flex flex-col items-center gap-2">
+        <Image
+          className="rounded-full "
+          src={consultant.image}
+          alt="profile picture"
+          width={100}
+          height={100}
+        />
+        <h2 className="text-4xl text-center">
+          {consultant.firstName} {consultant.lastName}
+        </h2>
+      </div>
+      <div className="flex flex-col gap-4 p-2">
+        <IconTemp path={mdilPhone as string} content={consultant.phone} />
+        <IconTemp path={mdilEmail as string} content={consultant.mail} />
         <IconTemp
-          path={mdilMapMarker}
+          path={mdilMapMarker as string}
           content={`${consultant.location.address} ${consultant.location.city} ${consultant.location.country}`}
         />
-        <div className="flex">
-          <Github url={consultant.github} />
-          <LinkedIn url={consultant.linkedin} />
-        </div>
+      </div>
+      <div className="flex">
+        <Github url={consultant.github} size={50} />
+        <LinkedIn url={consultant.linkedin} size={50} />
       </div>
     </section>
   );
