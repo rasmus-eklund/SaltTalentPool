@@ -26,10 +26,10 @@ const ContactCard: FC<ContactCardProps> = ({ consultant }) => {
         </h2>
       </div>
       <div className="flex flex-col gap-4 p-2">
-        <IconTemp path={mdilPhone as string} content={consultant.phone} />
-        <IconTemp path={mdilEmail as string} content={consultant.mail} />
+        <IconTemp path={mdilPhone} content={consultant.phone} />
+        <IconTemp path={mdilEmail} content={consultant.mail} />
         <IconTemp
-          path={mdilMapMarker as string}
+          path={mdilMapMarker}
           content={`${consultant.location.address} ${consultant.location.city} ${consultant.location.country}`}
         />
       </div>

@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import type { Consultant } from "@/types";
 import DeveloperItem from "./DeveloperItem";
@@ -14,7 +13,9 @@ const Search = () => {
         className="flex gap-2"
         onSubmit={(e) => {
           e.preventDefault();
-          queryConsultants(search).then((res) => setConsultants(res));
+          queryConsultants(search)
+            .then((res) => setConsultants(res))
+            .catch((err: Error) => console.log(err.message));
         }}
         action=""
       >

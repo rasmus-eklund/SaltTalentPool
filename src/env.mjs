@@ -7,8 +7,7 @@ export const env = createEnv({
    * isn't built with invalid env vars.
    */
   server: {
-    MEILISEARCH_HOST: z.string(),
-    MEILISEARCH_API_KEY: z.string(),
+    
   },
 
   /**
@@ -17,6 +16,8 @@ export const env = createEnv({
    * `NEXT_PUBLIC_`.
    */
   client: {
+    NEXT_PUBLIC_MEILISEARCH_HOST: z.string(),
+    NEXT_PUBLIC_MEILISEARCH_KEY: z.string(),
     // NEXT_PUBLIC_CLIENTVAR: z.string().min(1),
   },
 
@@ -25,8 +26,8 @@ export const env = createEnv({
    * middlewares) or client-side so we need to destruct manually.
    */
   runtimeEnv: {
-    MEILISEARCH_HOST: process.env.MEILISEARCH_HOST,
-    MEILISEARCH_API_KEY: process.env.MEILISEARCH_API_KEY,
+    NEXT_PUBLIC_MEILISEARCH_HOST: process.env.NEXT_PUBLIC_MEILISEARCH_HOST,
+    NEXT_PUBLIC_MEILISEARCH_KEY: process.env.NEXT_PUBLIC_MEILISEARCH_KEY,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**
