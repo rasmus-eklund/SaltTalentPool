@@ -3,18 +3,20 @@ import { MeiliSearch } from "meilisearch";
 import { env } from "../env.mjs";
 import type { Consultant } from "@/types";
 
+// eslint-disable-next-line
 export const getUser = async (id: string) => {
   // fetch
   return data.consultants.find((c) => c.id === id)!;
 };
 
+// eslint-disable-next-line
 export const getUsers = async () => {
   return data.consultants;
 };
 
 const client = new MeiliSearch({
   host: env.NEXT_PUBLIC_MEILISEARCH_HOST,
-  apiKey: env.NEXT_PUBLIC_MEILISEARCH_KEY
+  apiKey: env.NEXT_PUBLIC_MEILISEARCH_KEY,
 });
 
 export const queryConsultants = async (text: string) => {
