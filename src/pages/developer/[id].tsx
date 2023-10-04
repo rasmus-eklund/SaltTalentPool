@@ -3,7 +3,7 @@ import type { Consultant } from "@/types";
 import { useRouter } from "next/router";
 import { getUser } from "@/server/client";
 import TeamMembers from "../components/developer/TeamMembers";
-import Skillset from "../components/developer/Skillset";
+import Skills from "../components/developer/Skills";
 import ContactCard from "../components/developer/ContactCard";
 import RecentProject from "../components/developer/RecentProject";
 
@@ -38,7 +38,7 @@ const Developer = () => {
             <section className="flex w-3/4 flex-col justify-around gap-8 px-10 text-xl">
               <p>{consultant.decription}</p>
               <RecentProject project={consultant.recentProjects[0]!} />
-              <Skillset skills={consultant.skills} />
+              <Skills skills={consultant.skills} />
               <TeamMembers consultants={members} />
             </section>
           </>

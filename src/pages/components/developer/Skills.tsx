@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 type Props = { skills: string[] };
 
-const Skillset: FC<Props> = ({ skills }) => {
+const Skills: FC<Props> = ({ skills }) => {
   return (
     <div className="flex flex-col gap-4">
       <h2 className="text-3xl font-semibold">Skillset</h2>
@@ -17,4 +17,4 @@ const Skillset: FC<Props> = ({ skills }) => {
   );
 };
 
-export default Skillset;
+export default Skills;
