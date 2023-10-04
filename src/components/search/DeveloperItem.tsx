@@ -3,7 +3,7 @@ import type { Consultant } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import Github from "../icons/Github";
-import LinkedIn from "../../pages/components/LinkedIn";
+import LinkedIn from "../icons/LinkedIn";
 
 type DeveloperListProps = {
   consultant: Consultant;
