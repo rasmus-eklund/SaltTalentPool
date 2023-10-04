@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Consultant } from "@/types";
 import DeveloperItem from "../../components/search/DeveloperItem";
 import { queryConsultants } from "@/server/client";
@@ -7,8 +7,14 @@ const Search = () => {
   const [consultants, setConsultants] = useState<Consultant[]>();
   const [search, setSearch] = useState("");
 
+  useEffect(() => {
+    queryConsultants("")
+      .then((res) => setConsultants(res))
+      .catch((err: Error) => console.log(err.message));
+  }, []);
+
   return (
-    <main className="flex flex-col grow gap-10 px-6">
+    <main className="flex grow flex-col gap-10 px-6">
       <form
         className="flex gap-2"
         onSubmit={(e) => {
@@ -36,7 +42,7 @@ const Search = () => {
             <DeveloperItem key={consultant.id} consultant={consultant} />
           ))
         ) : (
-          <p>Search to find</p>
+          <p>Loading...</p>
         )}
       </ul>
     </main>
