@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import { getUser } from "@/server/client";
 import TeamMembers from "../components/developer/TeamMembers";
 import Skills from "../components/developer/Skills";
-import ContactCard from "../components/developer/ContactCard";
-import RecentProject from "../components/developer/RecentProject";
+import ContactInfo from "../components/developer/ContactInfo";
+import Projects from "../components/developer/Projects";
 
 const Developer = () => {
   const router = useRouter();
@@ -32,12 +32,12 @@ const Developer = () => {
         {consultant && (
           <>
             <section className="flex w-1/4 flex-col gap-6 p-5">
-              <ContactCard consultant={consultant} />
+              <ContactInfo consultant={consultant} />
             </section>
             <hr className="h-full border-[1px] border-black/20" />
             <section className="flex w-3/4 flex-col justify-around gap-8 px-10 text-xl">
               <p>{consultant.decription}</p>
-              <RecentProject project={consultant.recentProjects[0]!} />
+              <Projects project={consultant.recentProjects[0]!} />
               <Skills skills={consultant.skills} />
               <TeamMembers consultants={members} />
             </section>

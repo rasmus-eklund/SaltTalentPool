@@ -10,7 +10,7 @@ type ContactCardProps = {
   consultant: Consultant;
 };
 
-const ContactCard: FC<ContactCardProps> = ({ consultant }) => {
+const ContactInfo: FC<ContactCardProps> = ({ consultant }) => {
   return (
     <>
       <div className="flex flex-col items-center gap-2">
@@ -41,4 +41,4 @@ const ContactCard: FC<ContactCardProps> = ({ consultant }) => {
   );
 };
 
-export default ContactCard;
+export default ContactInfo;

@@ -5,7 +5,7 @@ type RecentProjectProps = {
   project: Project;
 };
 
-const RecentProject: FC<RecentProjectProps> = ({ project }) => {
+const Projects: FC<RecentProjectProps> = ({ project }) => {
   return (
     <div className="flex flex-col gap-4">
       <p className="text-3xl font-semibold">Current Project : {project.title}</p>
@@ -22,4 +22,4 @@ const RecentProject: FC<RecentProjectProps> = ({ project }) => {
   );
 };
 
-export default RecentProject;
+export default Projects;
