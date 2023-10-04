@@ -8,7 +8,7 @@ const Search = () => {
   const [search, setSearch] = useState("");
 
   return (
-    <main className="flex flex-col gap-10 px-6">
+    <main className="flex flex-col grow gap-10 px-6">
       <form
         className="flex gap-2"
         onSubmit={(e) => {
