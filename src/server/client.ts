@@ -1,5 +1,8 @@
+"use server";
 import { data } from "./mockdata";
 import { MeiliSearch } from "meilisearch";
+import { env } from "../env.mjs";
+import { Consultant } from "@/types";
 
 export const getUser = async (id: string) => {
   // fetch
@@ -10,26 +13,10 @@ export const getUsers = async () => {
   return data.consultants;
 };
 
-const client = new MeiliSearch({
-  host: "http://localhost:7700",
-  apiKey: "aSampleMasterKey",
-});
+// console.log("HELOLLLOOASA", env.MEILISEARCH_HOST);
+const client = new MeiliSearch({});
 
-const populateMeilisearch = async () => {
-  const devs = await getUsers();
-  client
-    .index("developers")
-    .addDocuments(devs)
-    .then((res) => console.log(res))
-    .catch((err: Error) => {
-      console.log(err.message);
-    });
+export const queryConsultants = async (text: string) => {
+  const res = await client.index("developers").search(text);
+  return res.hits as Consultant[];
 };
-
-populateMeilisearch()
-  .then(() => console.log("Meilisearch populated!"))
-  .catch((err: Error) => {
-    console.log(err.message);
-  });
-
-export default client;

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import type { Consultant } from "@/types";
 import { useRouter } from "next/router";
-import Skillset from "../components/developer/Skillset";
+import Skillset from "../components/developer/skillset";
 import RecentProject from "../components/developer/recentProject";
 import { getUser } from "@/server/client";
 import TeamMembers from "../components/developer/TeamMembers";
-import ContactCard from "../components/developer/ContactCard";
+import ContactCard from "../components/developer/contactCard";
 
 const Developer = () => {
   const router = useRouter();
@@ -27,13 +27,15 @@ const Developer = () => {
       });
   }, [router.query.id]);
   return (
-    <main className="flex grow justify-center bg-gradient-to-b from-orange to-pink px-10">
-      <div className="flex h-full bg-gray">
+    <main className="flex grow justify-center bg-gradient-to-b from-orange to-pink px-10 ">
+      <div className="flex w-[95%] bg-gray">
         {consultant && (
           <>
-            <ContactCard consultant={consultant} />
-            <hr className="border-black/20 border-[1px] h-full"/>
-            <section className="flex flex-col justify-around gap-8 px-10 text-xl">
+            <section className="flex w-1/4 flex-col gap-6 p-5">
+              <ContactCard consultant={consultant} />
+            </section>
+            <hr className="h-full border-[1px] border-black/20" />
+            <section className="flex w-3/4 flex-col justify-around gap-8 px-10 text-xl">
               <p>{consultant.decription}</p>
               <RecentProject project={consultant.recentProjects[0]!} />
               <Skillset skills={consultant.skills} />

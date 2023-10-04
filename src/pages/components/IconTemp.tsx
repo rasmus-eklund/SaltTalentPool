@@ -8,7 +8,7 @@ type IconProps = {
 
 const IconTemp: FC<IconProps> = ({ path, content }: IconProps) => {
   return (
-    <div className="flex">
+    <div className="flex gap-1">
       <Icon
         path={path}
         title="email"
