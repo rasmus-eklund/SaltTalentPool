@@ -5,7 +5,7 @@ import RecentProject from "../components/developer/recentProject";
 import { getUser } from "@/server/client";
 import TeamMembers from "../components/developer/TeamMembers";
 import ContactCard from "../components/developer/contactCard";
-import Skillset from "../components/developer/Skillset";
+import Skillset from "../components/developer/skillset";
 
 const Developer = () => {
   const router = useRouter();
