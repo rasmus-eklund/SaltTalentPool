@@ -1,10 +1,10 @@
 import type { Consultant } from "@/types";
 import type { FC } from "react";
 import Image from "next/image";
-import Github from "../Github";
-import LinkedIn from "../LinkedIn";
+import Github from "../icons/Github";
+import LinkedIn from "../../pages/components/LinkedIn";
 import { mdilEmail, mdilPhone, mdilMapMarker } from "@mdi/light-js";
-import IconTemp from "../IconTemp";
+import IconTemp from "../../pages/components/IconTemp";
 
 type ContactCardProps = {
   consultant: Consultant;

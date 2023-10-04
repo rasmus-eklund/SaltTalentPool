@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Consultant } from "@/types";
-import DeveloperItem from "./DeveloperItem";
+import DeveloperItem from "../../components/search/DeveloperItem";
 import { queryConsultants } from "@/server/client";
 
 const Search = () => {

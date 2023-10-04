@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import type { Consultant } from "@/types";
 import { useRouter } from "next/router";
 import { getUser } from "@/server/client";
-import TeamMembers from "../components/developer/TeamMembers";
-import Skills from "../components/developer/Skills";
-import ContactInfo from "../components/developer/ContactInfo";
-import Projects from "../components/developer/Projects";
+import TeamMembers from "../../components/developer/TeamMembers";
+import Skills from "../../components/developer/Skills";
+import ContactInfo from "../../components/developer/ContactInfo";
+import Projects from "../../components/developer/Projects";
 
 const Developer = () => {
   const router = useRouter();

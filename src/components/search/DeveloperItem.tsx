@@ -2,8 +2,8 @@ import type { FC } from "react";
 import type { Consultant } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import Github from "../components/Github";
-import LinkedIn from "../components/LinkedIn";
+import Github from "../icons/Github";
+import LinkedIn from "../../pages/components/LinkedIn";
 
 type DeveloperListProps = {
   consultant: Consultant;
