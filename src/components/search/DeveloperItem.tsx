@@ -11,7 +11,7 @@ type DeveloperListProps = {
 
 const DeveloperItem: FC<DeveloperListProps> = ({ consultant }) => {
   return (
-    <li className="flex items-center justify-between rounded-md border-2 border-black/30 p-4 shadow-xl">
+    <li className="flex items-center justify-between rounded-md border-2 border-black/30 p-4 shadow-xl hover:bg-orange/50 ease-linear duration-500">
       <div className="flex items-center gap-4">
         <Image
           src={consultant.image}
