@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Consultant } from "@/types";
-import SearchItem from "../../components/search/SearchItem";
+import SearchItem from "../../components/SearchItem";
 import { queryConsultants } from "@/server/client";
 
 const Search = () => {
@@ -16,7 +16,7 @@ const Search = () => {
   return (
     <main className="flex grow flex-col gap-10 px-6">
       <form
-        className="flex gap-2"
+        className="flex gap-2 md:w-1/3"
         onSubmit={(e) => {
           e.preventDefault();
           queryConsultants(search)
@@ -26,7 +26,7 @@ const Search = () => {
         action=""
       >
         <input
-          className="rounded-md border-2 border-black/50 px-2"
+          className="min-w-0 grow rounded-md border-2 border-black/50 px-2"
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}

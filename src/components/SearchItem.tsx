@@ -26,11 +26,11 @@ const SearchItem: FC<DeveloperListProps> = ({ consultant }) => {
         >
           {consultant.firstName} {consultant.lastName}
         </Link>
-        <p className="invisible md:visible">{consultant.title}</p>
+        <p className="hidden md:block">{consultant.title}</p>
       </div>
-      <div className="flex items-center">
-        <Github url={consultant.github} size={48} />
-        <LinkedIn url={consultant.linkedin} size={48} />
+      <div className="flex items-center ">
+        <Github url={consultant.github} className={'h-10 w-10 md:h-16 md:w-16'} />
+        <LinkedIn url={consultant.linkedin} className={'h-10 w-10 md:h-16 md:w-16'} />
       </div>
     </li>
   );
