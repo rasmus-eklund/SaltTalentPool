@@ -1,18 +1,18 @@
 import type { Consultant } from "@/types";
 import type { FC } from "react";
 import Image from "next/image";
-import Github from "../icons/Github";
+import Github from "./icons/Github";
 
 import { mdilEmail, mdilPhone, mdilMapMarker } from "@mdi/light-js";
-import IconTemp from "../icons/IconTemp";
-import LinkedIn from "../icons/LinkedIn";
+import IconTemp from "./icons/IconTemp";
+import LinkedIn from "./icons/LinkedIn";
 
 
 type ContactCardProps = {
   consultant: Consultant;
 };
 
-const ContactInfo: FC<ContactCardProps> = ({ consultant }) => {
+const ContactCard: FC<ContactCardProps> = ({ consultant }) => {
   return (
     <>
       <div className="flex flex-col items-center gap-2">
@@ -36,11 +36,11 @@ const ContactInfo: FC<ContactCardProps> = ({ consultant }) => {
         />
       </div>
       <div className="flex">
-        <Github url={consultant.github} size={50} />
-        <LinkedIn url={consultant.linkedin} size={50} />
+        <Github url={consultant.github} className={'h-10 w-10'} />
+        <LinkedIn url={consultant.linkedin} className={'h-10 w-10'} />
       </div>
     </>
   );
 };
 
-export default ContactInfo;
+export default ContactCard;
