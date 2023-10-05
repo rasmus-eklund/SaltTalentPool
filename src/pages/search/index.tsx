@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Consultant } from "@/types";
-import DeveloperItem from "../../components/search/DeveloperItem";
+import SearchItem from "../../components/search/SearchItem";
 import { queryConsultants } from "@/server/client";
 
 const Search = () => {
@@ -39,7 +39,7 @@ const Search = () => {
       <ul className="flex flex-col gap-2">
         {consultants ? (
           consultants.map((consultant) => (
-            <DeveloperItem key={consultant.id} consultant={consultant} />
+            <SearchItem key={consultant.id} consultant={consultant} />
           ))
         ) : (
           <p>Loading...</p>
