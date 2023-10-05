@@ -21,7 +21,7 @@ export const getUsersById = async (ids: string[]) => {
   );
 };
 
-const client = new MeiliSearch({
+export const client = new MeiliSearch({
   host: env.NEXT_PUBLIC_MEILISEARCH_HOST,
   apiKey: env.NEXT_PUBLIC_MEILISEARCH_KEY,
 });
