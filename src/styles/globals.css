@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply h-screen;
+  @apply h-screen w-screen;
 }
 
 #__next {

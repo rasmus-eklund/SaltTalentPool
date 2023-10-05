@@ -6,6 +6,7 @@ import TeamMembers from "../../components/DeveloperTeamMembers";
 import Skills from "../../components/DeveloperSkills";
 import ContactCard from "../../components/DeveloperContactCard";
 import Projects from "../../components/DeveloperProjects";
+import SectionHeader from "@/components/SectionHeader";
 
 const Developer = () => {
   const router = useRouter();
@@ -28,19 +29,22 @@ const Developer = () => {
   }, [router.query.id]);
   return (
     <main className="flex grow justify-center bg-gradient-to-b from-orange to-pink px-10 ">
-      <div className="flex w-[95%] bg-gray">
+      <div className="flex flex-col md:w-[95%] md:flex-row gap-4">
         {consultant && (
           <>
-            <section className="flex w-1/4 flex-col gap-6 p-5">
+            <div className="md:w-1/4 bg-gray">
               <ContactCard consultant={consultant} />
-            </section>
-            <hr className="h-full border-[1px] border-black/20" />
-            <section className="flex w-3/4 flex-col justify-around gap-8 px-10 text-xl">
-              <p>{consultant.decription}</p>
+            </div>
+            {/* <hr className="h-full border-[1px] border-black/20" /> */}
+            <div className="flex flex-col gap-12 p-4 text-xl md:w-3/4 md:px-10 bg-gray">
+              <section className="flex flex-col gap-4">
+                <SectionHeader title={consultant.title} />
+                <p>{consultant.decription}</p>
+              </section>
               <Projects project={consultant.recentProjects[0]!} />
               <Skills skills={consultant.skills} />
               <TeamMembers consultants={members} />
-            </section>
+            </div>
           </>
         )}
       </div>

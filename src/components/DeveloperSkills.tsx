@@ -1,11 +1,12 @@
 import type { FC } from "react";
+import SectionHeader from "./SectionHeader";
 
 type Props = { skills: string[] };
 
 const Skills: FC<Props> = ({ skills }) => {
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="text-3xl font-semibold">Skillset</h2>
+      <SectionHeader title="Skillset"/>
       <ul className="flex flex-wrap gap-4">
         {skills.map((skill, index) => (
           <li key={skill + index}>

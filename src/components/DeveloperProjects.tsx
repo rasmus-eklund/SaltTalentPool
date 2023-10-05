@@ -1,5 +1,6 @@
 import type { Project } from "@/types";
 import type { FC } from "react";
+import SectionHeader from "./SectionHeader";
 
 type RecentProjectProps = {
   project: Project;
@@ -8,8 +9,8 @@ type RecentProjectProps = {
 const Projects: FC<RecentProjectProps> = ({ project }) => {
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-3xl font-semibold">Current Project : {project.title}</p>
-      <div className="flex gap-4">
+      <SectionHeader title={project.title}/>
+      <div className="flex flex-col gap-4 md:flex-row">
         <iframe
           src={project.youtube}
           title={project.title}
