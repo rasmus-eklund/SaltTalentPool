@@ -14,7 +14,7 @@ type ContactCardProps = {
 
 const ContactCard: FC<ContactCardProps> = ({ consultant }) => {
   return (
-    <section className="flex flex-col gap-6 p-4">
+    <section className="flex flex-col gap-6 p-4 pt-8">
       <div className="flex flex-col items-center gap-2">
         <Image
           className="rounded-full "
@@ -23,7 +23,7 @@ const ContactCard: FC<ContactCardProps> = ({ consultant }) => {
           width={100}
           height={100}
         />
-        <h1 className="text-center text-xl md:text-2xl lg:text-4xl">
+        <h1 className="text-center text-2xl md:text-4xl">
           {consultant.firstName} {consultant.lastName}
         </h1>
       </div>

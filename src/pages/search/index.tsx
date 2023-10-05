@@ -14,9 +14,9 @@ const Search = () => {
   }, []);
 
   return (
-    <main className="flex grow flex-col gap-10 px-6">
+    <main className="flex grow flex-col gap-6 md:gap-10 px-6">
       <form
-        className="flex gap-2 md:w-1/3"
+        className="flex gap-2 pt-4 md:w-1/3"
         onSubmit={(e) => {
           e.preventDefault();
           queryConsultants(search)

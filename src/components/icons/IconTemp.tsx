@@ -10,6 +10,7 @@ const IconTemp: FC<IconProps> = ({ path, content }: IconProps) => {
   return (
     <div className="flex gap-1">
       <Icon
+        className="shrink-0"
         path={path}
         title="email"
         size={1}
@@ -18,7 +19,7 @@ const IconTemp: FC<IconProps> = ({ path, content }: IconProps) => {
         vertical
         color="black"
       />
-      <span>{content}</span>
+      <p className="">{content}</p>
     </div>
   );
 };

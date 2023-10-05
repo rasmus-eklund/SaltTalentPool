@@ -29,14 +29,14 @@ const Developer = () => {
   }, [router.query.id]);
   return (
     <main className="flex grow justify-center bg-gradient-to-b from-orange to-pink px-10 ">
-      <div className="flex flex-col md:w-[95%] md:flex-row gap-4">
+      <div className="flex flex-col py-6 md:w-[95%] md:flex-row gap-4 md:py-0">
         {consultant && (
           <>
-            <div className="md:w-1/4 bg-gray">
+            <div className="md:w-1/4 bg-gray rounded-md md:rounded-none">
               <ContactCard consultant={consultant} />
             </div>
             {/* <hr className="h-full border-[1px] border-black/20" /> */}
-            <div className="flex flex-col gap-12 p-4 text-xl md:w-3/4 md:px-10 bg-gray">
+            <div className="flex flex-col gap-12 p-4 text-xl md:w-3/4 md:px-10 bg-gray rounded-md md:rounded-none">
               <section className="flex flex-col gap-4">
                 <SectionHeader title={consultant.title} />
                 <p>{consultant.decription}</p>
