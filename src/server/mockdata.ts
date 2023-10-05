@@ -20,7 +20,7 @@ export const data: { consultants: Consultant[] } = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum risus non turpis efficitur malesuada. In ac tincidunt mauris. Ut cursus ac odio vitae vestibulum. ",
       github: "https://github.com/Jarjarsson",
       linkedin: "link",
-      title: "best developer in the world",
+      title: "Fullstack Jar Developer",
       recentProjects: [
         {
           title: "Onchainbet",
@@ -50,7 +50,7 @@ export const data: { consultants: Consultant[] } = {
         "With a background in Mechatronics and Architecture, I am a detail-oriented problem solver passionate about IT. I enjoy the challenge of designing products and find being a fullstack developer to be the perfect blend of my engineering and design expertise. My multidimensional perspective enables me to approach tasks from different angles, delivering innovative and user-centric solutions. I am driven to create seamless and intuitive experiences that make a lasting impact. ",
       github: "https://github.com/rofunn",
       linkedin: "https://www.linkedin.com/in/jou-fang-wang-44a14a16b/",
-      title: "An innovative Full-Stack Developer  who is passionate About IT and Automation Tech",
+      title: "Fullstack JavaScript Developer",
       recentProjects: [
         {
           title: "Onchainbet",
@@ -60,7 +60,7 @@ export const data: { consultants: Consultant[] } = {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum risus non turpis efficitur malesuada. In ac tincidunt mauris. Ut cursus ac odio vitae vestibulum. ",
         },
       ],
-      teamMembers: [ "3", "4"],
+      teamMembers: ["2", "3", "4"],
     },
     {
       id: "3",
@@ -80,7 +80,7 @@ export const data: { consultants: Consultant[] } = {
         "I like to code, especially using React. ",
       github: "https://github.com/allanheremi",
       linkedin: "https://www.linkedin.com/in/allanheremi/",
-      title: "Most humble developer in the world",
+      title: "Fullstack JavaScript Developer",
       recentProjects: [
         {
           title: "Lightblock",
@@ -110,7 +110,7 @@ export const data: { consultants: Consultant[] } = {
         "I like to BBQ, drink beer and code",
       github: "https://github.com/rasmus-eklund",
       linkedin: "https://www.linkedin.com/in/rasmus-eklund-36348255/",
-      title: "Fullstack JavaScript developer plus Python",
+      title: "Fullstack JavaScript Developer",
       recentProjects: [
         {
           title: "Salt Talent Pool",

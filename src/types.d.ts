@@ -21,3 +21,12 @@ export type Project = {
   youtube: string;
   description: string;
 };
+
+export type SearchResult = {
+  firstName: string;
+  lastName: string;
+  decription: string;
+  skills: string[];
+  id: string;
+  title: string;
+};
