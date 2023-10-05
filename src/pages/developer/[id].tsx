@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import type { Consultant } from "@/types";
 import { useRouter } from "next/router";
 import { getUser } from "@/server/client";
-import TeamMembers from "../../components/developer/TeamMembers";
-import Skills from "../../components/developer/Skills";
-import ContactInfo from "../../components/developer/ContactInfo";
-import Projects from "../../components/developer/Projects";
+import TeamMembers from "../../components/DeveloperTeamMembers";
+import Skills from "../../components/DeveloperSkills";
+import ContactCard from "../../components/DeveloperContactCard";
+import Projects from "../../components/DeveloperProjects";
 
 const Developer = () => {
   const router = useRouter();
@@ -32,7 +32,7 @@ const Developer = () => {
         {consultant && (
           <>
             <section className="flex w-1/4 flex-col gap-6 p-5">
-              <ContactInfo consultant={consultant} />
+              <ContactCard consultant={consultant} />
             </section>
             <hr className="h-full border-[1px] border-black/20" />
             <section className="flex w-3/4 flex-col justify-around gap-8 px-10 text-xl">
