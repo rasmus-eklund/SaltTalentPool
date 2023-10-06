@@ -7,7 +7,6 @@ import { mdilEmail, mdilPhone, mdilMapMarker } from "@mdi/light-js";
 import IconTemp from "./icons/IconTemp";
 import LinkedIn from "./icons/LinkedIn";
 
-
 type ContactCardProps = {
   consultant: Consultant;
 };
@@ -28,16 +27,31 @@ const ContactCard: FC<ContactCardProps> = ({ consultant }) => {
         </h1>
       </div>
       <div className="flex flex-col gap-4 p-2">
-        <IconTemp path={mdilPhone} content={consultant.phone} />
-        <IconTemp path={mdilEmail} content={consultant.mail} />
-        <IconTemp
-          path={mdilMapMarker}
-          content={`${consultant.location.address} ${consultant.location.city} ${consultant.location.country}`}
-        />
+        <div className="flex gap-1">
+          <IconTemp path={mdilPhone} />
+          <p>{consultant.phone}</p>
+        </div>
+        <div className="flex items-center gap-1">
+          <IconTemp path={mdilEmail} />
+          <a
+            className="text-orange underline"
+            href={`mailto: ${consultant.mail}`}
+          >
+            email me
+          </a>
+        </div>
+        <div className="flex items-center gap-1">
+          <IconTemp path={mdilMapMarker} />
+          <div className="flex flex-wrap gap-1">
+            <p>{consultant.location.address}</p>
+            <p>{consultant.location.city}</p>
+            <p>{consultant.location.country}</p>
+          </div>
+        </div>
       </div>
       <div className="flex">
-        <Github url={consultant.github} className={'h-10 w-10'} />
-        <LinkedIn url={consultant.linkedin} className={'h-10 w-10'} />
+        <Github url={consultant.github} className={"h-10 w-10"} />
+        <LinkedIn url={consultant.linkedin} className={"h-10 w-10"} />
       </div>
     </section>
   );

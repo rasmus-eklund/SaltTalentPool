@@ -11,8 +11,11 @@ type DeveloperListProps = {
 
 const SearchItem: FC<DeveloperListProps> = ({ consultant }) => {
   return (
-    <li className="flex items-center justify-between rounded-md border-2 border-black/30 p-2 shadow-lg hover:bg-orange/50 ease-linear duration-500 md:p-4">
-      <div className="flex items-center gap-4">
+    <li className="flex items-center justify-between rounded-md border-2 border-black/30 p-2 shadow-lg duration-500 ease-linear hover:bg-orange/50 md:p-4">
+      <Link
+        href={`developer/${consultant.id}`}
+        className="flex items-center gap-4"
+      >
         <Image
           src={consultant.image}
           alt="Image"
@@ -20,17 +23,29 @@ const SearchItem: FC<DeveloperListProps> = ({ consultant }) => {
           height={48}
           className="rounded-full border-2 border-black"
         />
-        <Link
-          href={`developer/${consultant.id}`}
-          className="text-sm md:text-2xl font-bold"
-        >
+        <h2 className="text-sm font-bold md:text-2xl">
           {consultant.firstName} {consultant.lastName}
-        </Link>
+        </h2>
         <p className="hidden md:block">{consultant.title}</p>
-      </div>
+      </Link>
+      <ul className="hidden gap-4 lg:flex">
+        {consultant.skills.slice(0, 4).map((skill, index) => (
+          <li key={skill + index}>
+            <p className="rounded-full bg-orange px-4 py-1 text-sm text-white">
+              {skill}
+            </p>
+          </li>
+        ))}
+      </ul>
       <div className="flex items-center ">
-        <Github url={consultant.github} className={'h-10 w-10 md:h-16 md:w-16'} />
-        <LinkedIn url={consultant.linkedin} className={'h-10 w-10 md:h-16 md:w-16'} />
+        <Github
+          url={consultant.github}
+          className={"h-10 w-10 md:h-16 md:w-16"}
+        />
+        <LinkedIn
+          url={consultant.linkedin}
+          className={"h-10 w-10 md:h-16 md:w-16"}
+        />
       </div>
     </li>
   );

@@ -37,7 +37,7 @@ export const data: { consultants: Consultant[] } = {
       image: "https://avatars.githubusercontent.com/u/81062114?v=4",
       firstName: "Jou-Fang",
       lastName: "Wang",
-      phone: "+46-729-528-627",
+      phone: "+46-012-345-678",
       mail: "joufang.w@gmail.com",
       location: {
         address: "Somewhere 12",
