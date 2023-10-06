@@ -2,6 +2,7 @@ import { data } from "./mockdata";
 import { MeiliSearch } from "meilisearch";
 import { env } from "../env.mjs";
 import type { SearchResult } from "@/types";
+import populateMeilisearch from "./seedMeilisearch";
 
 // eslint-disable-next-line
 export const getUser = async (id: string) => {
@@ -31,3 +32,9 @@ export const queryConsultants = async (text: string) => {
   const searchData = res.hits as SearchResult[];
   return await getUsersById(searchData.map((consultant) => consultant.id));
 };
+
+populateMeilisearch()
+  .then(() => console.log("Meilisearch populated!"))
+  .catch((err: Error) => {
+    console.log(err.message);
+  });

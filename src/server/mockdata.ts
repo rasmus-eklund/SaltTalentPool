@@ -7,7 +7,7 @@ export const data: { consultants: Consultant[] } = {
       image: "https://avatars.githubusercontent.com/u/144101438?v=4",
       firstName: "Jar",
       lastName: "Jarsson",
-      phone: "+46-729-528-627",
+      phone: "+46-123-654-789",
       mail: "jarjar.jarsson@gmail.com",
       location: {
         address: "Somewhere 12",
@@ -15,7 +15,7 @@ export const data: { consultants: Consultant[] } = {
         country: "Sweden",
       },
       cv: "url",
-      skills: ["JavaScript", "Python", "Matlab"],
+      skills: ["Java", "Angular", "Matlab"],
       decription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum risus non turpis efficitur malesuada. In ac tincidunt mauris. Ut cursus ac odio vitae vestibulum. ",
       github: "https://github.com/Jarjarsson",

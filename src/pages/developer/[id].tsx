@@ -7,6 +7,7 @@ import Skills from "../../components/DeveloperSkills";
 import ContactCard from "../../components/DeveloperContactCard";
 import Projects from "../../components/DeveloperProjects";
 import SectionHeader from "@/components/SectionHeader";
+import Link from "next/link";
 
 const Developer = () => {
   const router = useRouter();
@@ -48,6 +49,7 @@ const Developer = () => {
           </>
         )}
       </div>
+      <Link href={'/search'} className="fixed bottom-5 right-5 bg-white text-black p-2 border-black border-2 rounded-md hover:bg-orange hover:text-white">go back</Link>
     </main>
   );
 };

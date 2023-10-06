@@ -1,5 +1,8 @@
-export const settings = {
+const settings = {
   synonyms: {
-    'js': ['javascript']
-  }
-}
+    js: ["javascript"],
+    ts: ["typescript"]
+  },
+};
+
+export default settings;
