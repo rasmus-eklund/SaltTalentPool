@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@testing-library/cypress": "^10.0.1",
+    "@types/dotenv": "^8.2.0",
     "@types/eslint": "^8.44.2",
     "@types/node": "^18.16.0",
     "@types/react": "^18.2.28",
